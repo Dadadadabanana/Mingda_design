@@ -946,9 +946,6 @@ $wordCount: 4; */
         margin-bottom: 50px;
     }
 
-    .platform-container {
-        grid-template-columns: repeat(6, 1fr);
-    }
 
     .platform {
         padding: 24px;
@@ -992,7 +989,7 @@ $wordCount: 4; */
     
     .platform-content {
         font-size: 18px;
-        line-height: 2.8rem;
+        line-height: 2.6rem;
     }
 
     .project-container {
