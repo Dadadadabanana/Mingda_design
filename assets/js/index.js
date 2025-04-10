@@ -137,7 +137,7 @@ document.querySelectorAll(".project-container").forEach((container, index) => {
     container.addEventListener("click", function () {
         const urls = [
             "/projects/Loan.html",  
-            "/projects/Requestmanagement.html",
+            "/projects/RequestManagement.html",
             "/projects/Repayment.html",   
             "/projects/SharePoint.html",  
             "/projects/DesignSystem.html",
