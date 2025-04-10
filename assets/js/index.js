@@ -136,12 +136,12 @@ document.addEventListener("DOMContentLoaded", function (){
 document.querySelectorAll(".project-container").forEach((container, index) => {
     container.addEventListener("click", function () {
         const urls = [
+            "/projects/Loan.html",  
+            "/projects/Requestmanagement.html",
             "/projects/Repayment.html",   
-            "/projects/Loan.html",       
-            "/projects/Verification.html",
-            "/projects/DesignSystem.html",
             "/projects/SharePoint.html",  
-            "/projects/Inside9.html",     
+            "/projects/DesignSystem.html",
+            "/projects/Inside9.html",  
         ];
 
         let basePath = window.location.origin + window.location.pathname.split("/").slice(0, -1).join("/");

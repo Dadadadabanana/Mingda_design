@@ -1,9 +1,9 @@
 const pages = [
-    "Repayment.html",
     "Loan.html",
-    "Verification.html",
-    "DesignSystem.html",
+    "RequestManagement.html",
+    "Repayment.html",
     "SharePoint.html",
+    "DesignSystem.html",
     "Inside9.html",
 ];
 
