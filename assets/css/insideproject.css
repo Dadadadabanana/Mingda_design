@@ -358,7 +358,8 @@ body {
     .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1,
-    .keypages-title {
+    .keypages-title,
+    .keypages-content {
         font-size: 1.8rem;
     }
 
@@ -425,7 +426,8 @@ body {
     .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1,
-    .keypages-title {
+    .keypages-title,
+    .keypages-content {
         font-size: 1.8rem;
     }
 
@@ -512,7 +514,8 @@ body {
     .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1,
-    .keypages-title {
+    .keypages-title,
+    .keypages-content {
         font-size: 2.8rem;
     }
 
@@ -577,7 +580,8 @@ body {
     .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1,
-    .keypages-title {
+    .keypages-title,
+    .keypages-content {
         font-size: 2.8rem;
         line-height: 3.8rem;
     }
@@ -644,8 +648,8 @@ body {
     .timeline-description-para-spec3,
     .keypage-title,
     .keypage-title1,
-    .keypages-title 
-    {
+    .keypages-title,
+    .keypages-content {
         font-size: 3rem;
         line-height: 4rem;
     }
