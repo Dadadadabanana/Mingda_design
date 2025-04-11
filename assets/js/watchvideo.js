@@ -3,7 +3,8 @@ const videos_button = [
     ".loan-video",
     ".designsystem-video",
     ".sharepoint-video",
-    ".inside9-video"
+    ".inside9-video",
+    ".requestmanagement-video"
 ];
 
 // 对应的视频链接
@@ -12,7 +13,8 @@ const videoLinks = {
     ".loan-video": "https://youtu.be/gFTCM0DA03E",
     ".designsystem-video": "https://youtu.be/aQNs5diGQBg",
     ".sharepoint-video": "https://youtu.be/cXNsjjkd7Nk",
-    ".inside9-video": "https://youtu.be/_FHZHcRiZG8"
+    ".inside9-video": "https://youtu.be/_FHZHcRiZG8",
+    ".requestmanagement-video": "https://youtu.be/5UG-tfmbq74"
 };
 
 
