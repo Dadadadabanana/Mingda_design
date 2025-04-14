@@ -14,7 +14,7 @@ const videoLinks = {
     ".designsystem-video": "https://youtu.be/aQNs5diGQBg",
     ".sharepoint-video": "https://youtu.be/cXNsjjkd7Nk",
     ".inside9-video": "https://youtu.be/_FHZHcRiZG8",
-    ".requestmanagement-video": "https://youtu.be/5UG-tfmbq74"
+    ".requestmanagement-video": "https://youtu.be/uNclHieg7eo"
 };
 
 
