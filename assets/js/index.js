@@ -138,9 +138,9 @@ document.querySelectorAll(".project-container").forEach((container, index) => {
         const urls = [
             "/projects/Loan.html",  
             "/projects/RequestManagement.html",
-            "/projects/Repayment.html",   
+            "/projects/Repayment.html",  
+            "/projects/DesignSystem.html", 
             "/projects/SharePoint.html",  
-            "/projects/DesignSystem.html",
             "/projects/Inside9.html",  
         ];
 
