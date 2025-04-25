@@ -265,6 +265,36 @@ body {
     gap: 30px;
 }
 
+.designsystem-inside-overview,
+.requestmanagement-inside-overview,
+.sharepoint-inside-overview {
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.designsystem-inside-overview {
+    background-color: #FF7875;
+}
+
+.requestmanagement-inside-overview {
+    background-color: #40A9FF;
+}
+
+.sharepoint-inside-overview {
+    background-color: #8764B8;
+}
+
+.designsystem-overview,
+.requestmanagement-overview,
+.sharepoint-overview {
+    transform: scale(0.85);
+    transform-origin: center center;
+}
+
 .keypage-title {
     font-weight: 600;
 }
