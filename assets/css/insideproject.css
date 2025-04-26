@@ -292,7 +292,7 @@ body {
 .requestmanagement-overview,
 .sharepoint-overview {
     transform: scale(0.85);
-    transform-origin: center center;
+    object-fit: contain;
 }
 
 .keypage-title {
@@ -424,6 +424,7 @@ body {
     .inside-project-container, .inside-project-container3 {
         margin: 10rem 0 0 0;
     }
+
 
     .project-inside-container1 {
         margin-top: 30px;
