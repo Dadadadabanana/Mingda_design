@@ -113,6 +113,13 @@ header {
     flex: 1;
 }
 
+.skill-box-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 30px;
+}
+
 .skill-box {
     display: flex;
     justify-content: flex-start; /* 让图片在容器中居中 */
@@ -126,9 +133,6 @@ header {
     font-family: 'Albert Sans', sans-serif;
 }
 
-.skill-container {
-    margin-bottom: 40px;
-}
 
 .moreintor {
     font-size: 1.6rem;
@@ -258,6 +262,9 @@ header {
         height: 8rem;
 
     }
+
+    
+
 }
 
 
@@ -275,6 +282,8 @@ header {
         height: 4rem;
 
     }
+
+
 }
 
 @media screen and (width: 1024px) {
@@ -308,6 +317,10 @@ header {
         width: 50px;
         height: 50px;
     }
+
+    .third-box-right {
+        gap: 40px;
+    }
 }
 
 @media screen and (min-width: 1047px) and (max-width: 1151px) {
@@ -332,7 +345,14 @@ header {
         gap: 18px;
     }
 
+    .skill-container {
+        margin-bottom: 1.8rem;
+    }
 
+    .skill-image {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 
@@ -354,6 +374,15 @@ header {
     .page2-container {
         max-width: 1280px;
     }
+
+    .skill-container {
+        margin-bottom: 2rem;
+    }
+
+    .skill-image {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1727px){
@@ -372,6 +401,14 @@ header {
 
     .page2-container {
         max-width: 1280px;
+    }
+    .skill-container {
+        margin-bottom: 2.6rem;
+    }
+
+    .skill-image {
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -395,5 +432,13 @@ header {
     .page2-container {
         max-width: 1280px;
         width: 100%;
+    }
+    .skill-container {
+        margin-bottom: 5rem;
+    }
+
+    .skill-image {
+        width: 80px;
+        height: 80px;
     }
 }
