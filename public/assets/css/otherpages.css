@@ -1,0 +1,314 @@
+header {
+    background-image: none;
+    height: 6rem;
+}
+
+
+.page2-container {
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 80px auto; 
+    transform-origin: top;
+    animation: expand 1s ease both;
+}
+
+.name-container {
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 40px;
+    color: #11100E;
+}
+
+.self-intro-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 60px;
+    width: 100%;
+}
+
+.self-intro {
+    flex: 1; /* 让自我介绍部分占 50% 宽度 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.self-image-container {
+    flex: 1; /* 让图片部分占 50% 宽度 */
+}
+
+.self-image {
+    width: 100%; /* 使图片的宽度自适应容器 */
+    height: auto; /* 保持图片的纵横比 */
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+}
+
+
+.paragraph {
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.2rem;
+}
+
+.title {
+    position: relative;
+    top: 80px;
+}
+
+.timeline-container {
+    position: relative;
+    top: 80px;
+}
+
+.timeline-image {
+    width: 100%;
+    height: auto;
+}
+
+.third-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 159px;
+    margin-bottom: 150px;
+    gap: 80px;
+    width: 100%;
+}
+
+.skill-image {
+    width: 50px;
+    height: 50px;
+}
+
+.third-box-right {
+    display: flex;
+    flex-direction: column; /* 让子元素上下排列 */
+    gap: 80px; /* 控制 skill-container 和 moreintro-container 之间的间距 */
+    flex: 1; 
+}
+
+.third-box-left {
+    flex: 1;
+}
+
+.skill-box-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.skill-box {
+    display: flex;
+    justify-content: flex-start; /* 让图片在容器中居中 */
+    gap: 20px;
+
+}
+
+.skill-title, .title{
+    margin-bottom: 30px; /* 调整标题与内容的间距 */
+    font-size: 2.8rem;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+
+.moreintor {
+    font-size: 1.6rem;
+    font-family: 'Albert Sans', sans-serif;
+    line-height: 2.2rem;
+}
+
+
+
+
+@media screen and (max-width: 922px) {
+    .projects-page-container {
+        top: 40px;
+        margin-bottom: 60px;
+    }
+    .page2-container {
+        margin: 50px auto;
+    }
+    .self-intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .paragraph,
+    .moreintor {
+        font-size: 18px;
+        line-height: 2.6rem;
+    }
+    .third-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-box {
+        gap: 1rem;
+    }
+    .skill-image {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .skill-image {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .skill-container {
+        margin-bottom: 2rem;
+    }
+}
+
+
+@media screen and (min-width: 922px) and (max-width: 1023px) {
+    .paragraph, .moreintor {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+    }
+    .skill-box {
+        gap: 1rem;
+    }
+
+    .skill-image {
+        width: 4rem;
+        height: 4rem;
+
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1151px) {
+    .paragraph, .moreintor {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+    }
+    .skill-box {
+        gap: 1.4rem;
+    }
+    .skill-image {
+        width: 50px;
+        height: 50px;
+    }
+    .third-box-right {
+        gap: 40px;
+    }
+    .self-intro {
+        gap: 16px;
+    }
+}
+
+@media screen and (min-width: 1153px) and (max-width: 1280px) {
+    .paragraph, .moreintor {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    .self-intro {
+        gap: 18px;
+    }
+
+    .skill-container {
+        margin-bottom: 1.8rem;
+    }
+
+    .skill-image {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .paragraph, .moreintor {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    
+    .self-intro {
+        gap: 42px;
+    }
+
+    .skill-title, .title {
+        font-size: 3.6rem;
+    }
+
+    .page2-container {
+        max-width: 1280px;
+    }
+
+    .skill-container {
+        margin-bottom: 2rem;
+    }
+
+    .skill-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1727px){
+    .paragraph, .moreintor {
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .skill-title, .title {
+        font-size: 3.6rem;
+    }
+
+    .self-intro {
+        gap: 34px;
+    }
+
+    .page2-container {
+        max-width: 1280px;
+    }
+    .skill-container {
+        margin-bottom: 2.6rem;
+    }
+
+    .skill-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .paragraph, .moreintor {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+    }
+
+    .skill-title, .title {
+        font-size: 3.6rem;
+    }
+
+    .self-intro {
+        gap: 40px;
+    }
+
+    .self-intro-container {
+        gap: 100px
+    }
+    .page2-container {
+        max-width: 1280px;
+        width: 100%;
+    }
+    .skill-container {
+        margin-bottom: 5rem;
+    }
+
+    .skill-image {
+        width: 80px;
+        height: 80px;
+    }
+}

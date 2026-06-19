@@ -4,14 +4,6 @@ header {
 }
 
 
-.page-container {
-    position: relative;
-    width: 100%;
-    margin: 30px auto; 
-    height: auto; 
-    animation: expand 1s ease both; 
-}
-
 .page2-container {
     width: 80%;
     height: auto;
@@ -21,15 +13,6 @@ header {
     animation: expand 1s ease both;
 }
 
-@keyframes expand {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
- 
 .name-container {
     font-family: 'Albert Sans', sans-serif;
     font-style: normal;
@@ -143,128 +126,44 @@ header {
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 922px) {
     .projects-page-container {
         top: 40px;
         margin-bottom: 60px;
     }
-
-    .page2-container{
+    .page2-container {
         margin: 50px auto;
     }
-
     .self-intro-container {
         flex-direction: column;
         align-items: center;
     }
-
-
     .paragraph,
-    .moreintor 
-    {
+    .moreintor {
         font-size: 18px;
         line-height: 2.6rem;
     }
-
     .third-container {
         flex-direction: column;
         align-items: center;
     }
-
     .skill-box {
         gap: 1rem;
     }
+    .skill-image {
+        width: 8rem;
+        height: 8rem;
+    }
+}
 
+@media screen and (max-width: 767px) {
     .skill-image {
         width: 4.5rem;
         height: 4.5rem;
-
     }
-
     .skill-container {
         margin-bottom: 2rem;
     }
-}
-
-@media screen and (width: 768px) {
-    .projects-page-container {
-        top: 40px;
-        margin-bottom: 60px;
-    }
-
-    .page2-container{
-        margin: 50px auto;
-    }
-
-    .self-intro-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    .paragraph,
-    .moreintor 
-    {
-        font-size: 18px;
-        line-height: 2.6rem;
-    }
-
-    .third-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-box {
-        gap: 1rem;
-    }
-
-    .skill-image {
-        width: 8rem;
-        height: 8rem;
-
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 922px) {
-    .projects-page-container {
-        top: 40px;
-        margin-bottom: 60px;
-    }
-
-    .page2-container{
-        margin: 50px auto;
-    }
-
-    .self-intro-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    .paragraph,
-    .moreintor 
-    {
-        font-size: 18px;
-        line-height: 2.6rem;
-    }
-
-    .third-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-box {
-        gap: 1rem;
-    }
-
-    .skill-image {
-        width: 8rem;
-        height: 8rem;
-
-    }
-
-    
-
 }
 
 
@@ -286,25 +185,7 @@ header {
 
 }
 
-@media screen and (width: 1024px) {
-    .paragraph, .moreintor {
-        font-size: 1.4rem;
-        line-height: 2.0rem;
-    }
-
-    .skill-box {
-        gap: 1.4rem;
-    }
-
-    .skill-image {
-        width: 50px;
-        height: 50px;
-    }
-
-
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1146px){
+@media screen and (min-width: 1024px) and (max-width: 1151px) {
     .paragraph, .moreintor {
         font-size: 1.4rem;
         line-height: 2.0rem;
@@ -312,24 +193,13 @@ header {
     .skill-box {
         gap: 1.4rem;
     }
-
     .skill-image {
         width: 50px;
         height: 50px;
     }
-
     .third-box-right {
         gap: 40px;
     }
-}
-
-@media screen and (min-width: 1047px) and (max-width: 1151px) {
-    .paragraph, .moreintor {
-        font-size: 1.4rem;
-        line-height: 2rem;
-    }
-
-
     .self-intro {
         gap: 16px;
     }
