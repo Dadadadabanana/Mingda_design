@@ -1,0 +1,1408 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Albert Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/albert-sans-v1-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Albert Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/albert-sans-v1-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Albert Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/albert-sans-v1-latin-200.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Albert Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/albert-sans-v1-latin-600.woff2') format('woff2');
+}
+
+:root{
+    --header-word-size: 16px;
+}
+
+html{
+    background: #FFFFFF;
+    font-size: 10px;
+}
+
+li{
+    list-style: none;
+}
+
+.root{
+    width: 100%;
+}
+
+.header-container {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    height: 6rem;
+    z-index: 1000;
+}
+
+
+.header-box {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+
+.autosign-image {
+    width: 93px;
+    height: 36px;
+    margin-top: 2px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.main-nav{
+    height: 100%;
+    flex: auto;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.main-nav-item{
+    display: flex;
+}
+
+.nav-main-list{
+    display: flex;
+}
+
+
+.list-item{
+    color: #2B2B2B;
+    font-size: 1.5rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+    white-space: nowrap;  /* Prevent text from wrapping */
+    overflow: hidden; /* Optionally hide overflowing text */
+    text-overflow: ellipsis; /* Optionally show ellipsis if text overflows */
+}
+
+.main-nav-button {
+    display: flex;
+}
+
+.button-box {
+    height: 6rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav__link {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Albert Sans', sans-serif;
+    font-size: var(--header-word-size);
+    color: #FFFFFF;
+}
+
+
+.nav__link:not(.autosign)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav__link:not(.autosign):hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.autosign-image:hover {
+    transform: scale(1.1); /* 轻微放大 */
+    opacity: 0.8; /* 降低透明度 */
+}
+
+.nav__link.active {
+    font-weight: bold;
+}
+
+.nav__link.notactive {
+    font-weight: normal;
+}
+
+.button-box {
+    padding: 0 0 0 30px;
+}
+
+.send-email {
+    background: #333;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 24px;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    cursor: pointer;
+}
+
+.email-image {
+    width: 16px; 
+    height: 12px;
+    margin-left: 8px; 
+}
+
+.send-email:hover {
+    background-color: #666;
+    border: #666;
+}
+
+.phone-show{
+    display: none;
+}
+
+.page-container {
+    animation: expand 0.3s ease both; 
+}
+
+@keyframes expand {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.banner-text-container {
+    width: 100%;
+    height: 40vh;
+    background-image: url('../images/banner.png');
+    background-size: cover; /* 背景填满 container */
+    background-position: center; /* 居中显示背景 */
+    background-repeat: no-repeat; /* 防止背景重复 */
+    padding-top: 6rem;
+}
+
+
+
+.slogan-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; /* 自动适应内容高度 */
+    overflow: hidden;
+}
+
+
+.slogan {
+    font-size: 36px;
+    font-family: 'Albert Sans', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    white-space: nowrap; /* 强制单行 */
+    position: relative;
+} 
+
+
+
+
+
+
+
+.greeting {
+    margin-top: 50px;
+    display: flex; /* Aligns the elements in a row */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    gap: 10px; /* Adds space between the elements */
+
+
+}
+  
+.shake-image {
+    width: 50px; /* Adjust the width of the image as needed */
+    height: auto;
+    animation-name: wave-animation;
+    animation-duration: 2.1s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+
+.hi {
+    margin: 0;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #11100E;
+}
+
+
+.introduction {
+    display: flex; /* Aligns the elements in a row */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    text-align: center;
+}
+
+.introduction p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #11100E;
+    max-width: 550px;
+}
+
+.button-container {
+    position: relative;
+    display: flex; /* Aligns the elements in a row */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    text-align: center;
+    gap: 20px;
+}
+
+.download_resume {
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--header-word-size);
+    line-height: 24px;
+    width: 200px;
+    height: 50px;
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+.watchvideo {
+    border: 2px solid #000000;
+    border-radius: 100px;
+    color: #000000;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--header-word-size);
+    line-height: 24px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download_resume:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.watchvideo:hover {
+    background-color: #ddd;
+}
+
+.triangle-image {
+    width: 9px;
+    height: 11px;
+    margin-left: 2px; 
+}
+
+.pulse-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #000000; /* 可调 */
+    position: relative;
+    margin-left: 10px;
+    animation: pulse 0.9s ease-out infinite;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+    }
+    60% {
+      box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+  }
+
+.video-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    z-index: 1000;
+}
+
+#myVideo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 20px;
+    /* padding: 5px 10px; */
+    width: 40px;  /* 设置宽度 */
+    height: 40px; /* 设置高度，确保是正圆 */
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0; /* 让内容垂直居中 */
+}
+
+/* 重新播放按钮（居中） */
+.replay-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: none; /* 默认隐藏 */
+}
+
+
+.text-container {
+    display: flex; /* Aligns the elements in a row */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    margin-top: 50px;
+}
+
+.text {
+    margin: 0;
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+    color: #11100E;
+}
+
+.page1-project-container {
+    margin-top: 60px;
+}
+
+
+.selected {
+    position: relative;
+    display: flex; /* Aligns the elements in a row */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    top: 20px;
+}
+
+.project {
+    font-family: 'Albert Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.6rem;
+    line-height: 58px;
+    color: #11100E;
+}
+
+.projects-class {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+    gap: 60px; /* 控制 container 之间的间距 */
+    width: 80%; /* 控制 container 的宽度 */
+    margin: 40px auto; /* 居中整个 section */
+    padding: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid #CCCCCC; */
+    width: 100%;
+    height: auto; /* 统一高度 */
+    overflow: hidden; /* 防止内容溢出 */
+    padding: 30px; /* 边距 */
+    box-sizing: border-box; /* 确保padding不会影响到容器的总宽度 */
+    background: #f4f4f4;
+    border-radius: 20px;
+    transition: box-shadow 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.project-container:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+    background: #FFFFFF;
+}
+
+.project-image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Makes the image container square by using padding trick */
+    position: relative;
+
+}
+
+
+
+.project-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 10px;
+}
+
+
+.project-text-container {
+    width: 100%;
+    height: 40%; /* Text container takes up the remaining 40% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.company-name,
+.project-title,
+.project-introduction {
+    margin: 5px 0;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.company-name {
+    color: #666;
+}
+
+.company-name, .project-introduction {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.project-title {
+    font-size: 26px;
+}
+
+.project-introduction {
+    height: 43px;
+}
+
+.platform-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 80px auto 150px auto;
+}
+
+.platform-exter-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.platform-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.platform-inner-title-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.platform-title {
+    font-size: 36px;
+}
+
+.platform-inner-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.platform-content {
+    font-weight: 400;
+    font-size: 16px;
+    color: #5A5A5A;
+    line-height: 2.2rem;
+}
+
+.platform-title,
+.platform-inner-title,
+.platform-content {
+    font-family: 'Albert Sans', sans-serif;;
+}
+
+
+.footer-class {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
+
+}
+  
+.footer-image {
+    width: 100%;
+    height: auto;
+}
+  
+.footer-r1, .footer-r2 {
+    position: absolute;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+
+}
+  
+.footer-r1 {
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    margin-bottom: 70px;
+}
+
+
+.left-group, .right-group {
+    display: flex;
+    align-items: center;
+}
+  
+.left-group {
+    justify-content: flex-start; /* Left-aligned */
+    gap: 10px;
+    margin-left: 40px;
+}
+  
+.right-group {
+    justify-content: flex-end; /* Right-aligned */
+    gap: 30px;
+    margin-right: 40px;
+}
+  
+.c1, .footer-signauto {
+    display: inline-block;
+}
+  
+.footer-email, .footer-linkdein, .footer-behence {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+  
+.footer-r2 {
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 60px;
+    height: 50px;
+    line-height: 24px;
+}
+  
+.cr1 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    margin-left: 40px;
+}
+  
+.cr2 {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    margin-right: 40px;
+}
+
+.cr1, .cr2 {
+    color: #999;
+}
+
+.c1, .cr1, .cr2 {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: 16px;
+}
+
+.c1 {
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.footer-signauto {
+    width: 102.67px;
+    height: 42px;
+}
+
+.footer-email {
+    width: 34px;
+    height: 26px;
+}
+
+.footer-linkdein {
+    width: 26px;
+    height: 26px;
+}
+
+.footer-behence {
+    width: 42px;
+    height: 26px;
+}
+
+.footer-linkdein {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-linkdein:hover {
+    opacity: 0.7;
+}
+
+.footer-email {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-email:hover {
+    opacity: 0.7;
+}
+
+.footer-behence {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-behence:hover {
+    opacity: 0.7;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    width: 5.5rem;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0; 
+    transform: scale(0.8); 
+    transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+    cursor: pointer;
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.back-to-top__image {
+    height: 90%;
+}
+
+
+.mobile-platform-container {
+    display: none;
+}
+
+.footer-mobile-container {
+    display: none;
+}
+
+@media (min-width: 1750px){
+
+    .slogan {
+        font-size: 4.5rem; 
+        line-height: 6rem;
+        
+    }
+
+    .download_resume {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .watchvideo {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .introduction p {
+        font-size: 2.4rem;
+        max-width: 700px;
+        line-height: 3.4rem;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+
+    .platform {
+        padding: 24px;
+    }
+
+    .platform span:last-child {
+        font-size: 1.4rem;
+    }
+
+    .c1 {
+        font-size: 40px;
+    }
+
+
+    .footer-r2 {
+        height: 60px;
+    }
+
+    .project-title {
+        font-size: 36px;
+    }
+
+    .company-name, .project-introduction {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .project-text-container {
+        margin: 10px;
+    }
+
+    .platform-title,
+    .project
+     {
+        font-size: 40px;
+    }
+    
+    .platform-inner-title {
+        font-size: 24px;
+    }
+    
+    .platform-content {
+        font-size: 18px;
+        line-height: 2.6rem;
+    }
+
+    .project-container {
+        padding: 40px;
+    }
+    .container-max1280 {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .projects-class {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-box {
+        max-width: 1280px;
+        width: 100%;
+    }
+
+    .platform-container {
+        width: 100%;
+    }
+
+    .footer-r1,
+    .footer-r2 {
+        max-width: 1280px;
+    }
+
+    .left-group,
+    .cr1
+    {
+        margin-left: 0;
+    }
+
+    .right-group,
+    .cr2
+    {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1749px) {
+    .slogan {
+        font-size: 4rem; 
+        line-height: 5.8rem;
+        
+    }
+
+    .download_resume {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .watchvideo {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .introduction p {
+        font-size: 2.4rem;
+        max-width: 700px;
+        line-height: 3.2rem;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+
+    .c1 {
+        font-size: 40px;
+    }
+
+
+
+    .footer-r2 {
+        height: 60px;
+    }
+
+    .platform-title,
+    .project {
+        font-size: 38px;
+    }
+    
+    .platform-inner-title {
+        font-size: 22px;
+    }
+    
+    .platform-content {
+        font-size: 18px;
+    }
+
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .container-max1280 {
+        max-width: 1280px;
+        margin: auto;
+        width: 80%;
+    }
+
+    .projects-class {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-box {
+        max-width: 1280px;
+    }
+
+    .platform-container {
+        width: 100%;
+    }
+
+    .footer-r1,
+    .footer-r2 {
+        max-width: 1280px;
+    }
+
+    .left-group,
+    .cr1
+    {
+        margin-left: 0;
+    }
+
+    .right-group,
+    .cr2
+    {
+        margin-right: 0;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+
+    .slogan {
+        font-size: 4rem; 
+        line-height: 5.8rem;
+        
+    }
+
+    .download_resume {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .watchvideo {
+        width: 240px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .introduction p {
+        font-size: 2.4rem;
+        max-width: 700px;
+        line-height: 3.2rem;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+
+    .c1 {
+        font-size: 40px;
+    }
+
+    .cr1, .cr2 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+
+    .footer-r2 {
+        height: 60px;
+    }
+
+    .platform-title,
+    .project {
+        font-size: 38px;
+    }
+    
+    .platform-inner-title {
+        font-size: 22px;
+    }
+    
+    .platform-content {
+        font-size: 18px;
+    }
+
+    .company-name, .project-introduction {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+}
+
+@media screen and (min-width: 1053px) and (max-width: 1280px) {
+    .company-name, .project-introduction {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .introduction p {
+        line-height: 24px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .content {
+        width: 80%;
+    }
+
+    .main-nav-item {
+        display: none;
+        position: absolute;
+        width: 10rem;
+        right: 0;
+        top: 6.5rem;
+        border-radius: .5rem;
+        margin-right: 1rem;
+    }
+    .nav-main-list {
+        width: 100%;
+        background: #000000;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: .5rem;
+    }
+    .list-item {
+        width: 100%;
+        margin: 0 1rem;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    .list-item:last-child {
+        border-bottom: none;
+    }
+    .phone-show {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .nav-btn {
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .nav-btn span {
+        display: inline-block;
+        height: 4px;
+        width: 40px;
+        background: #FFFFFF;
+    }
+
+    .hi {
+        font-size: 2.8rem;
+        line-height: 2.5rem;
+    }
+    .projects-class {
+        grid-template-columns: 1fr;
+    }
+    .platform-container {
+        display: none;
+    }
+    .text {
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+    }
+    .button-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 50%;
+    }
+
+    .footer-class {
+        display: none;
+    }
+    .footer-mobile-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/footer-mobile.png');
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row1-container,
+    .row3-container {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: 'Albert Sans', sans-serif;
+    }
+    .row3-container {
+        gap: 60px;
+    }
+    .row1-container {
+        gap: 10px;
+    }
+    .row2-container,
+    .row4-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Albert Sans', sans-serif;
+        justify-content: center;
+        align-items: center;
+    }
+    .row2-container {
+        margin-bottom: 10px;
+        color: #CCCC;
+    }
+    .row4-container {
+        margin-top: 10px;
+        gap: 5px;
+        color: #fff;
+    }
+
+    .row1 {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .row2 {
+        font-size: 16px;
+    }
+    .row4 {
+        font-size: 14px;
+    }
+
+    .footer-email {
+        width: 40px;
+        height: 30px;
+    }
+    .footer-linkdein {
+        width: 30px;
+        height: 30px;
+    }
+    .introduction p {
+        width: 85%;
+        line-height: 130%;
+    }
+    .back-to-top {
+        right: 1rem;
+        bottom: 10rem;
+    }
+    .slogan {
+        white-space: wrap;
+        width: 90%;
+    }
+
+    .mobile-platform-container {
+        display: block;
+        position: relative;
+        align-items: center;
+        width: 80%;
+        margin: 80px auto 100px auto;
+    }
+    .platform-title-container {
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .platform-title {
+        font-size: 28px;
+        margin: 0 auto;
+    }
+    .platform {
+        border: 1px solid #CCCC;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .platform-inner-title-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        background: #FFFFFF;
+    }
+    .platform-inner-title {
+        font-weight: 400;
+    }
+    .platform-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .platform-content-container {
+        padding: 10px;
+        display: none;
+        margin: 0 20px 20px 20px;
+    }
+    .platform.active .platform-content-container {
+        display: block;
+    }
+    .platform-inner-title-container::after {
+        content: "";
+        margin-left: auto;
+        margin-right: 10px;
+        width: 13px;
+        height: 14px;
+        background-image: url('../images/collapse.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+    }
+    .platform.active .platform-inner-title-container::after {
+        transform: rotate(180deg);
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+    .project-container {
+        padding: 20px;
+    }
+    .project-text-container {
+        padding: 20px 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .project-container:hover {
+        transform: none;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .main-nav-item {
+        right: 3rem;
+    }
+    .project-container {
+        padding: 40px;
+    }
+    .project-text-container {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    .project-text-container {
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .row3-container {
+        gap: 40px;
+    }
+    .row2 {
+        font-size: 14px;
+    }
+    .row4 {
+        font-size: 12px;
+    }
+}

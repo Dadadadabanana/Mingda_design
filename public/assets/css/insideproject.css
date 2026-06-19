@@ -1,0 +1,555 @@
+:root {
+    --project-section-title: 3.6rem;
+    --project-company-name: 1.6rem;
+    --project-label: 1rem;
+    --project-image-width: 120rem;
+    --project-button-font: 1rem;
+    --project-paragraph-font: 2.4rem;
+    --project-paragraph-line-height: normal;
+    --project-part1-distance: 5rem;
+    --company-name-colour: #11100E;
+    --main-font: 'Albert Sans', sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+
+.inside-project-title {
+    font-size: var(--project-section-title);
+    font-weight: 700;
+}
+
+.inside-project-label {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 10px; 
+    margin: 20px 0;
+}
+
+.inside-project-label p {
+    padding: 5px 20px;
+    border-radius: 200px;
+    font-size: 18px;
+    background: #f4f4f4;
+    color: #5A5A5A;
+}
+
+
+.inside-project-page {
+    width: 80%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    margin: var(--project-part1-distance) auto;
+    animation: expand 1s ease both; 
+}
+
+.project-inside-image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.project-inside-cover-container {
+    width: 100%;
+    background-color: #f0f0f0; /* 占位背景色 */
+    border-radius: 20px;
+}
+
+.project-inside-image-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.inside-button-container {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.View-Prototype {
+    border: 2px solid #000000;
+    border-radius: 100px;
+    color: #000000;
+    font-weight: 400;
+    font-size: var(--header-word-size);
+    line-height: 24px;
+    height: 50px;
+    width: 240px;
+    text-align: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.View-Prototype:hover {
+    background-color: #ddd;
+}
+
+.inside-project-container2 {
+    margin: 5rem 0 0 0;
+}
+
+.title-container, 
+.inside-project-container,
+.inside-project-container2,
+.inside-project-container6 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    line-height: 3rem;
+}
+
+.inside-project-paragraph,
+.timeline-description-title,
+.timeline-description-para,
+.timeline-description-para-spec,
+.timeline-description-para-spec1,
+.timeline-description-para-spec2,
+.timeline-description-para-spec3,
+.keypage-title,
+.keypage-title1,
+.keypages-content,
+.keypages-title {
+    font-size: var(--project-paragraph-font);
+    line-height: var(--project-paragraph-line-height);
+}
+
+.keypages-title {
+    font-weight: 600;
+}
+
+.timeline-description-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30rem;
+}
+
+.description-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.description-requestmanagement {
+    gap: 5.8rem;
+}
+
+.Loan-description-right {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.timeline-description-title {
+    font-weight: 700;
+}
+
+.timeline-description-para-spec {
+    color: #326FE4;
+}
+
+.timeline-description-para-spec1 {
+    color: #FF4D4F;
+}
+
+.timeline-description-para-spec2 {
+    color: #724C9F;
+}
+
+.timeline-description-para-spec3 {
+    color: #1890FF;
+}
+
+.inside-project-container,  
+.inside-project-container3 {
+    margin: 15rem 0 0 0;
+}
+
+.inside-project-title2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.container5-question,
+.loan-container5-question,
+.sharepoint-container5-question,
+.design-container5-question,
+.requestmanagement-container5-question { 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    padding: 2rem 3rem;
+}
+
+.container5-question {
+    background: linear-gradient(270deg, #FF6E70 0%, #326FE4 100%);
+}
+
+.loan-container5-question {
+    background: linear-gradient(90deg, #69AAFE 0%, #326FE4 100%);
+}
+
+.sharepoint-container5-question {
+    background: linear-gradient(90deg, #734BA1 9%, #443995 89%);
+}
+
+.design-container5-question {
+    background: linear-gradient(90deg, #FF7875 0%, #FF4D4F 100%);
+}
+
+.requestmanagement-container5-question {
+    background: linear-gradient(90deg, #1890FF 9%, #40A9FF 89%);
+}
+
+
+.container5-paragraph,
+.sharepoint-container5-paragraph2,
+.design-container5-paragraph,
+.requestmanagement-container5-paragraph {
+    display: inline;
+    margin: 0;
+    font-size: 2.8rem;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+
+
+.sharepoint-container5-paragraph2:nth-child(2),
+.sharepoint-container5-paragraph2:nth-child(4),
+.design-container5-paragraph:nth-child(2),
+.container5-paragraph:nth-child(2),
+.requestmanagement-container5-paragraph:nth-child(2),
+.requestmanagement-container5-paragraph:nth-child(4) {
+    font-weight: 700;
+}
+
+
+.keypages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.keypages-container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 30px;
+}
+
+.project-inside-container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.designsystem-inside-overview,
+.requestmanagement-inside-overview,
+.sharepoint-inside-overview {
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.designsystem-inside-overview {
+    background-color: #FF7875;
+}
+
+.requestmanagement-inside-overview {
+    background-color: #40A9FF;
+}
+
+.sharepoint-inside-overview {
+    background-color: #8764B8;
+}
+
+.designsystem-overview,
+.requestmanagement-overview,
+.sharepoint-overview {
+    transform: scale(0.85);
+    object-fit: contain;
+}
+
+.keypage-title {
+    font-weight: 600;
+}
+
+.lovestory-photo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 30px; 
+}
+
+.lovestory-photo-container img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+
+
+.nav-to-page1 {
+    justify-content: flex-end;
+}
+
+.nav-to-page1, .nav-to-page2 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.nav-to-page2 {
+    justify-content: space-between;
+}
+
+.arrow-image {
+    width: 18px;
+    height: auto;
+}
+
+.nexttopage-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.next-page, .prev-page {
+    color: #2C2C2C;
+    font-size: 20px;
+}
+
+#prev-page,
+#next-page {
+    transition: opacity 0.3s ease;
+}
+
+#prev-page:hover,
+#next-page:hover {
+    opacity: 0.7;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    :root {
+        --project-paragraph-font: 1.8rem;
+    }
+
+    .inside-project-label {
+        display: none;
+    }
+    .project-inside-container1 {
+        margin-top: 20px;
+    }
+    .inside-project-title {
+        font-size: 3rem;
+    }
+    .description-right {
+        gap: 20px;
+    }
+    .timeline-description-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .inside-project-title2 {
+        font-size: 2.4rem;
+    }
+    .keypages-container {
+        gap: 5px;
+        margin-top: 20px;
+    }
+    .Loan-description-right {
+        gap: 20px;
+    }
+    .next-page, .prev-page {
+        font-size: 16px;
+    }
+    .lovestory-photo-container {
+        gap: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --project-paragraph-font: 1.8rem;
+    }
+
+    .inside-project-label {
+        display: none;
+    }
+    .inside-project-container, .inside-project-container3 {
+        margin: 10rem 0 0 0;
+    }
+    .project-inside-container1 {
+        margin-top: 30px;
+    }
+    .inside-project-title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .inside-project-paragraph {
+        line-height: 2.5rem;
+    }
+    .description-right {
+        gap: 20px;
+    }
+    .timeline-description-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .inside-project-title2 {
+        font-size: 2.4rem;
+    }
+    .keypages-container {
+        gap: 5px;
+        margin-top: 20px;
+    }
+    .project-inside-image {
+        margin-top: -10px;
+    }
+    .container5-paragraph,
+    .sharepoint-container5-paragraph2,
+    .design-container5-paragraph,
+    .requestmanagement-container5-paragraph {
+        font-size: 2rem;
+    }
+    .Loan-description-right {
+        gap: 20px;
+    }
+    .next-page, .prev-page {
+        font-size: 16px;
+    }
+    .lovestory-photo-container {
+        gap: 10px 10px;
+    }
+    .container5-question,
+    .loan-container5-question,
+    .sharepoint-container5-question,
+    .design-container5-question,
+    .requestmanagement-container5-question {
+        line-height: 2.3rem;
+    }
+    .title-container,
+    .inside-project-container,
+    .inside-project-container2,
+    .inside-project-container6 {
+        gap: 1.5rem;
+    }
+}
+
+
+@media screen and (min-width: 1281px) {
+    .inside-project-title {
+        font-size: 3.8rem;
+    }
+    .inside-project-label p {
+        font-size: 20px;
+    }
+    .View-Prototype {
+        font-size: 1.8rem;
+        height: 60px;
+        width: 260px;
+    }
+    .inside-project-container, .inside-project-container3 {
+        margin: 18rem 0 0 0;
+    }
+    .title-container,
+    .inside-project-container,
+    .inside-project-container2,
+    .inside-project-container6 {
+        gap: 4rem;
+    }
+    .inside-project-page {
+        max-width: 1280px;
+    }
+    .container5-question,
+    .loan-container5-question,
+    .sharepoint-container5-question,
+    .design-container5-question {
+        padding: 4rem 4rem;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    :root {
+        --project-paragraph-font: 2.8rem;
+    }
+
+    .inside-project-title2 {
+        font-size: 3.4rem;
+    }
+    .container5-paragraph,
+    .sharepoint-container5-paragraph2,
+    .design-container5-paragraph,
+    .requestmanagement-container5-paragraph {
+        font-size: 3.4rem;
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1727px) {
+    :root {
+        --project-paragraph-font: 2.8rem;
+        --project-paragraph-line-height: 3.8rem;
+    }
+
+    .inside-project-title2 {
+        font-size: 3.4rem;
+    }
+    .container5-paragraph,
+    .sharepoint-container5-paragraph2,
+    .design-container5-paragraph,
+    .requestmanagement-container5-paragraph {
+        font-size: 3.6rem;
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    :root {
+        --project-paragraph-font: 3rem;
+        --project-paragraph-line-height: 4rem;
+    }
+
+    .inside-project-title {
+        font-size: 4rem;
+    }
+    .inside-project-title2 {
+        font-size: 3.6rem;
+    }
+    .container5-paragraph,
+    .sharepoint-container5-paragraph2,
+    .design-container5-paragraph,
+    .requestmanagement-container5-paragraph {
+        font-size: 4.2rem;
+        margin-right: 6px;
+    }
+    .inside-project-container, .inside-project-container3 {
+        line-height: 400%;
+    }
+    .title-container,
+    .inside-project-container,
+    .inside-project-container2,
+    .inside-project-container6 {
+        gap: 3rem;
+    }
+}
